@@ -10,5 +10,6 @@ import java.lang.annotation.Target;
 public @interface CommandInfo {
 
 	String description();
+	String usage();
 	String[] aliases();
 }

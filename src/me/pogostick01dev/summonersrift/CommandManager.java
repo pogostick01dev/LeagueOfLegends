@@ -10,6 +10,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.pogostick01dev.summonersrift.cmds.CreateArena;
+import me.pogostick01dev.summonersrift.cmds.RemoveArena;
+
 public class CommandManager implements CommandExecutor {
 
 	private ArrayList<GameCommand> cmds;
@@ -18,6 +21,8 @@ public class CommandManager implements CommandExecutor {
 		cmds = new ArrayList<>();
 		
 		// Add all commands.
+		cmds.add(new CreateArena());
+		cmds.add(new RemoveArena());
 	}
 	
 	@Override
@@ -31,10 +36,11 @@ public class CommandManager implements CommandExecutor {
 		
 		if (cmd.getName().equalsIgnoreCase("summonersrift")) {
 			if (args.length == 0) {
-				for (GameCommand gcmd : cmds) {
+				cmds.stream().forEach((gcmd) -> {
 					CommandInfo info = gcmd.getClass().getAnnotation(CommandInfo.class);
-					p.sendMessage(ChatColor.GOLD + "/summonersrift (" + StringUtils.join(info.aliases(), " ").trim() + ") - " + info.description());
-				}
+					p.sendMessage(ChatColor.GOLD + "/summonersrift (" + StringUtils.join(info.aliases(), " ").trim() + ") " + info.usage() + " - " + info.description());
+				
+				});
 				
 				return true;
 			}
