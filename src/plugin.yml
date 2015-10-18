@@ -1,0 +1,10 @@
+name: SummonersRift
+author: PogostickDev
+main: me.pogostick01dev.summonersrift.SummonersRift
+version: 1.0
+description: A league of legends plugin.
+
+commands:
+    summonersrift:
+        usage: /<command>
+        description: Basic SummonersRift command.
