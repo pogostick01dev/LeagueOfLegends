@@ -42,6 +42,10 @@ public class Arena {
 		return state;
 	}
 	
+	protected void setState(ArenaState state) {
+		this.state = state;
+	}
+	
 	public Player[] getPlayers() {
 		return players.toArray(new Player[players.size()]);
 	}
@@ -57,13 +61,30 @@ public class Arena {
 		
 		players.add(p);
 		p.teleport(spawns.get(players.size() - 1));
-		
 		p.sendMessage(ChatColor.GREEN + "You have joined arena " + id + ".");
+		
+		if (players.size() >= spawns.size() * 5 && state == ArenaState.WAITING) {
+			this.state = ArenaState.PICKING;
+			new Countdown(this, 60, 60, 30, 20, 10, 5, 4, 3, 2, 1).runTaskTimer(SummonersRift.getPlugin(), 0, 1000);
+		}
 	}
 	
 	public void removePlayer(Player p) {
 		players.remove(p);
 		p.teleport(Bukkit.getServer().getWorlds().get(0).getSpawnLocation()); // TODO: Temporary
+	
+		if (players.size() <= 1) {
+			if (players.size() == 1) {
+				Bukkit.getServer().broadcastMessage(players.get(0).getName() + " has won on arena " + id + "!");
+			}
+			
+			else {
+				Bukkit.getServer().broadcastMessage("Arena " + id + " has ended without a winner");
+			}
+			
+			state = ArenaState.WAITING;
+			players.clear();
+		}
 	}
 	
 	public void addSpawn(Location loc) {
