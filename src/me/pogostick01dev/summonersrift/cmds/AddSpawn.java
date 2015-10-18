@@ -21,6 +21,7 @@ public class AddSpawn extends GameCommand {
 		}
 		
 		Arena a = ArenaManager.getInstance().getArena(args[0]);
+		
 		if (a == null) {
 			p.sendMessage(ChatColor.RED + "An arena with that name does not exist.");
 			return;
@@ -29,11 +30,8 @@ public class AddSpawn extends GameCommand {
 		a.addSpawn(p.getLocation());
 		
 		int size = SettingsManager.getArenas().<ConfigurationSection>get(a.getID() + ".spawns").getKeys(false).size();
-		
-		if (size <= 1) {
-			SettingsManager.getArenas().set(a.getID() + ".spawns." + size, p.getLocation());
-		} else {
-			p.sendMessage(ChatColor.RED + "Only two spawns are needed.");
-		}
+
+		SettingsManager.getArenas().set(a.getID() + ".spawns." + size, p.getLocation());
+		p.sendMessage(ChatColor.GREEN + "Added spawn.");
 	}
 }

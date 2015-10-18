@@ -27,9 +27,11 @@ public class Arena {
 		
 		this.spawns = new ArrayList<Location>();
 		
-		SettingsManager.getArenas().<ConfigurationSection>get(id + ".spawns").getKeys(false).stream().forEach((spawnID) -> {
-			spawns.add(SettingsManager.getArenas().<Location>get(id + ".spawns." + spawnID));
-		});
+		if(SettingsManager.getArenas().contains(id + ".spawns")) {
+			SettingsManager.getArenas().<ConfigurationSection>get(id + ".spawns").getKeys(false).stream().forEach((spawnID) -> {
+				spawns.add(SettingsManager.getArenas().<Location>get(id + ".spawns." + spawnID));
+			});
+		}
 		
 		this.players = new ArrayList<Player>();
 	}
