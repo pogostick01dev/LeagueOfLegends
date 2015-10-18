@@ -8,7 +8,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 - Create Arena
 - Remove Arena
   Add Spawn
-  Add Chest
   Join
   Leave
  */

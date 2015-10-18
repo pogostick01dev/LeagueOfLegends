@@ -10,6 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.pogostick01dev.summonersrift.cmds.AddSpawn;
 import me.pogostick01dev.summonersrift.cmds.CreateArena;
 import me.pogostick01dev.summonersrift.cmds.RemoveArena;
 
@@ -21,6 +22,7 @@ public class CommandManager implements CommandExecutor {
 		cmds = new ArrayList<>();
 		
 		// Add all commands.
+		cmds.add(new AddSpawn());
 		cmds.add(new CreateArena());
 		cmds.add(new RemoveArena());
 	}

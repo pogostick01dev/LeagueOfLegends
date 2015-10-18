@@ -52,4 +52,8 @@ public class Arena {
 		players.add(p);
 		p.teleport(spawns.get(players.size() - 1));
 	}
+	
+	public void addSpawn(Location loc) {
+		spawns.add(loc);
+	}
 }
