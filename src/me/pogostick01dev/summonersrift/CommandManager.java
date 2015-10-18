@@ -12,6 +12,8 @@ import org.bukkit.entity.Player;
 
 import me.pogostick01dev.summonersrift.cmds.AddSpawn;
 import me.pogostick01dev.summonersrift.cmds.CreateArena;
+import me.pogostick01dev.summonersrift.cmds.Join;
+import me.pogostick01dev.summonersrift.cmds.Leave;
 import me.pogostick01dev.summonersrift.cmds.RemoveArena;
 
 public class CommandManager implements CommandExecutor {
@@ -22,9 +24,11 @@ public class CommandManager implements CommandExecutor {
 		cmds = new ArrayList<>();
 		
 		// Add all commands.
-		cmds.add(new AddSpawn());
+		cmds.add(new Join());
+		cmds.add(new Leave());
 		cmds.add(new CreateArena());
 		cmds.add(new RemoveArena());
+		cmds.add(new AddSpawn());
 	}
 	
 	@Override
