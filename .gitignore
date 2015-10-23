@@ -2,5 +2,6 @@
 *.prefs
 *.classpath
 .project
+.~lock.itemtable.ods#
 bin/plugin.yml
 /bin/
