@@ -71,7 +71,7 @@ public class Arena {
 		
 		if (players.size() >= spawns.size() * 5 && state == ArenaState.WAITING) {
 			this.state = ArenaState.PICKING;
-			new Countdown(this, 60, 60, 30, 20, 10, 5, 4, 3, 2, 1).runTaskTimer(SummonersRift.getPlugin(), 0, 1000);
+			new Countdown(this, 60, 60, 30, 20, 10, 5, 4, 3, 2, 1).runTaskTimer(Main.getPlugin(), 0, 1000);
 		}
 	}
 	

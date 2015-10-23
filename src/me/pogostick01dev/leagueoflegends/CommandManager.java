@@ -36,17 +36,17 @@ public class CommandManager implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		if (!(sender instanceof Player)) {
-			sender.sendMessage(ChatColor.RED + "Only players can use SummonersRift.");
+			sender.sendMessage(ChatColor.RED + "Only players can use LeagueOfLegends.");
 			return true;
 		}
 		
 		Player p = (Player) sender;
 		
-		if (cmd.getName().equalsIgnoreCase("summonersrift")) {
+		if (cmd.getName().equalsIgnoreCase("leagueoflegends")) {
 			if (args.length == 0) {
 				cmds.stream().forEach((gcmd) -> {
 					CommandInfo info = gcmd.getClass().getAnnotation(CommandInfo.class);
-					p.sendMessage(ChatColor.GOLD + "/summonersrift (" + StringUtils.join(info.aliases(), " ").trim() + ") " + info.usage() + " - " + info.description());
+					p.sendMessage(ChatColor.GOLD + "/leagueoflegends (" + StringUtils.join(info.aliases(), " ").trim() + ") " + info.usage() + " - " + info.description());
 				
 				});
 				

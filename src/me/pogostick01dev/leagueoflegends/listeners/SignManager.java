@@ -17,7 +17,7 @@ import me.pogostick01dev.leagueoflegends.Arena;
 import me.pogostick01dev.leagueoflegends.ArenaManager;
 import me.pogostick01dev.leagueoflegends.LobbySign;
 import me.pogostick01dev.leagueoflegends.SettingsManager;
-import me.pogostick01dev.leagueoflegends.SummonersRift;
+import me.pogostick01dev.leagueoflegends.Main;
 
 public class SignManager implements Listener {
 
@@ -45,7 +45,7 @@ public class SignManager implements Listener {
 			signs.add(new LobbySign(loc, arena));
 		});
 		
-		Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(SummonersRift.getPlugin(), new Runnable() {
+		Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(Main.getPlugin(), new Runnable() {
 			public void run() {
 				signs.stream().forEach((sign) -> {
 					sign.update();

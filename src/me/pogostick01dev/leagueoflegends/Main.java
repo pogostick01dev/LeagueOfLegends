@@ -11,13 +11,13 @@ import me.pogostick01dev.leagueoflegends.listeners.PlayerLeaveArena;
 import me.pogostick01dev.leagueoflegends.listeners.PlayerMove;
 import me.pogostick01dev.leagueoflegends.listeners.SignManager;
 
-public class SummonersRift extends JavaPlugin {
+public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
 		ArenaManager.getInstance().setup();
 		
-		getCommand("summonersrift").setExecutor(new CommandManager());
+		getCommand("leagueoflegends").setExecutor(new CommandManager());
 		
 		PluginManager pm = Bukkit.getServer().getPluginManager();
 		pm.registerEvents(new BlockBreak(), this);
@@ -28,6 +28,6 @@ public class SummonersRift extends JavaPlugin {
 	}
 	
 	public static Plugin getPlugin() {
-		return Bukkit.getServer().getPluginManager().getPlugin("SummonersRift");
+		return Bukkit.getServer().getPluginManager().getPlugin("LeagueOfLegends");
 	}
 }

@@ -31,11 +31,11 @@ public class SettingsManager {
 	private FileConfiguration config;
 	
 	private SettingsManager(String fileName) {
-		if (!SummonersRift.getPlugin().getDataFolder().exists()) {
-			SummonersRift.getPlugin().getDataFolder().mkdir();
+		if (!Main.getPlugin().getDataFolder().exists()) {
+			Main.getPlugin().getDataFolder().mkdir();
 		}
 		
-		file = new File(SummonersRift.getPlugin().getDataFolder(), fileName + ".yml");
+		file = new File(Main.getPlugin().getDataFolder(), fileName + ".yml");
 		
 		if (!file.exists()) {
 			try {
