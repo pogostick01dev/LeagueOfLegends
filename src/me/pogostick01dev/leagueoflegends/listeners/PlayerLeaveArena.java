@@ -1,12 +1,12 @@
-package me.pogostick01dev.summonersrift.listeners;
+package me.pogostick01dev.leagueoflegends.listeners;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import me.pogostick01dev.summonersrift.Arena;
-import me.pogostick01dev.summonersrift.ArenaManager;
+import me.pogostick01dev.leagueoflegends.Arena;
+import me.pogostick01dev.leagueoflegends.ArenaManager;
 
 public class PlayerLeaveArena implements Listener {
 	

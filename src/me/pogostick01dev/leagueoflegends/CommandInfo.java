@@ -1,4 +1,4 @@
-package me.pogostick01dev.summonersrift;
+package me.pogostick01dev.leagueoflegends;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

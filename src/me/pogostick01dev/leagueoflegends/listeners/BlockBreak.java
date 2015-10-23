@@ -1,11 +1,11 @@
-package me.pogostick01dev.summonersrift.listeners;
+package me.pogostick01dev.leagueoflegends.listeners;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 
-import me.pogostick01dev.summonersrift.Arena;
-import me.pogostick01dev.summonersrift.ArenaManager;
+import me.pogostick01dev.leagueoflegends.Arena;
+import me.pogostick01dev.leagueoflegends.ArenaManager;
 
 public class BlockBreak implements Listener {
 

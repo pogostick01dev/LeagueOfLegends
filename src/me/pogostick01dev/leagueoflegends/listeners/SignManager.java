@@ -1,4 +1,4 @@
-package me.pogostick01dev.summonersrift.listeners;
+package me.pogostick01dev.leagueoflegends.listeners;
 
 import java.util.ArrayList;
 
@@ -13,11 +13,11 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import me.pogostick01dev.summonersrift.Arena;
-import me.pogostick01dev.summonersrift.ArenaManager;
-import me.pogostick01dev.summonersrift.LobbySign;
-import me.pogostick01dev.summonersrift.SettingsManager;
-import me.pogostick01dev.summonersrift.SummonersRift;
+import me.pogostick01dev.leagueoflegends.Arena;
+import me.pogostick01dev.leagueoflegends.ArenaManager;
+import me.pogostick01dev.leagueoflegends.LobbySign;
+import me.pogostick01dev.leagueoflegends.SettingsManager;
+import me.pogostick01dev.leagueoflegends.SummonersRift;
 
 public class SignManager implements Listener {
 

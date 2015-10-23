@@ -1,4 +1,4 @@
-package me.pogostick01dev.summonersrift;
+package me.pogostick01dev.leagueoflegends;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import me.pogostick01dev.summonersrift.Arena.ArenaState;
+import me.pogostick01dev.leagueoflegends.Arena.ArenaState;
 
 public class Countdown extends BukkitRunnable {
 

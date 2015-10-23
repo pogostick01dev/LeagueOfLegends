@@ -1,4 +1,4 @@
-package me.pogostick01dev.summonersrift.cmds;
+package me.pogostick01dev.leagueoflegends.cmds;
 
 import java.util.Set;
 
@@ -8,12 +8,12 @@ import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Player;
 
-import me.pogostick01dev.summonersrift.Arena;
-import me.pogostick01dev.summonersrift.ArenaManager;
-import me.pogostick01dev.summonersrift.CommandInfo;
-import me.pogostick01dev.summonersrift.GameCommand;
-import me.pogostick01dev.summonersrift.LobbySign;
-import me.pogostick01dev.summonersrift.SettingsManager;
+import me.pogostick01dev.leagueoflegends.Arena;
+import me.pogostick01dev.leagueoflegends.ArenaManager;
+import me.pogostick01dev.leagueoflegends.CommandInfo;
+import me.pogostick01dev.leagueoflegends.GameCommand;
+import me.pogostick01dev.leagueoflegends.LobbySign;
+import me.pogostick01dev.leagueoflegends.SettingsManager;
 
 @CommandInfo(description = "Add a lobby sign.", usage = "<arenaName>", aliases = { "addlobbysign", "addsign", "als" })
 public class AddLobbySign extends GameCommand {

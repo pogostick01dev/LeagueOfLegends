@@ -1,4 +1,4 @@
-package me.pogostick01dev.summonersrift;
+package me.pogostick01dev.leagueoflegends;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,12 +10,12 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.pogostick01dev.summonersrift.cmds.AddLobbySign;
-import me.pogostick01dev.summonersrift.cmds.AddSpawn;
-import me.pogostick01dev.summonersrift.cmds.CreateArena;
-import me.pogostick01dev.summonersrift.cmds.Join;
-import me.pogostick01dev.summonersrift.cmds.Leave;
-import me.pogostick01dev.summonersrift.cmds.RemoveArena;
+import me.pogostick01dev.leagueoflegends.cmds.AddLobbySign;
+import me.pogostick01dev.leagueoflegends.cmds.AddSpawn;
+import me.pogostick01dev.leagueoflegends.cmds.CreateArena;
+import me.pogostick01dev.leagueoflegends.cmds.Join;
+import me.pogostick01dev.leagueoflegends.cmds.Leave;
+import me.pogostick01dev.leagueoflegends.cmds.RemoveArena;
 
 public class CommandManager implements CommandExecutor {
 
