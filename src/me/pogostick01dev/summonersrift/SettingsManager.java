@@ -10,7 +10,10 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 public class SettingsManager {
 	
-	private static final SettingsManager configuration = new SettingsManager("config"), arenas = new SettingsManager("arenas");
+	private static final SettingsManager 
+			configuration = new SettingsManager("config"), 
+			arenas = new SettingsManager("arenas"),
+			signs = new SettingsManager("signs");
 	
 	public static SettingsManager getConfig() {
 		return configuration;
@@ -18,6 +21,10 @@ public class SettingsManager {
 	
 	public static SettingsManager getArenas() {
 		return arenas;
+	}
+	
+	public static SettingsManager getSigns() {
+		return signs;
 	}
 	
 	private File file;

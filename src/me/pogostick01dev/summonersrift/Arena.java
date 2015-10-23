@@ -40,6 +40,10 @@ public class Arena {
 		return id;
 	}
 	
+	public int getMaxPlayers() {
+		return spawns.size() * 5;
+	}
+	
 	public ArenaState getState() {
 		return state;
 	}
@@ -78,14 +82,16 @@ public class Arena {
 		if (players.size() <= 1) {
 			if (players.size() == 1) {
 				Bukkit.getServer().broadcastMessage(players.get(0).getName() + " has won on arena " + id + "!");
+				players.remove(0);
+				players.get(0).teleport(Bukkit.getServer().getWorlds().get(0).getSpawnLocation()); // TODO: Temporary
 			}
 			
 			else {
 				Bukkit.getServer().broadcastMessage("Arena " + id + " has ended without a winner");
 			}
 			
-			state = ArenaState.WAITING;
 			players.clear();
+			state = ArenaState.WAITING;
 		}
 	}
 	

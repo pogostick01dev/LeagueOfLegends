@@ -10,6 +10,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import me.pogostick01dev.summonersrift.cmds.AddLobbySign;
 import me.pogostick01dev.summonersrift.cmds.AddSpawn;
 import me.pogostick01dev.summonersrift.cmds.CreateArena;
 import me.pogostick01dev.summonersrift.cmds.Join;
@@ -29,6 +30,7 @@ public class CommandManager implements CommandExecutor {
 		cmds.add(new CreateArena());
 		cmds.add(new RemoveArena());
 		cmds.add(new AddSpawn());
+		cmds.add(new AddLobbySign());
 	}
 	
 	@Override

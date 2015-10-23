@@ -9,6 +9,7 @@ import me.pogostick01dev.summonersrift.listeners.BlockBreak;
 import me.pogostick01dev.summonersrift.listeners.EntityDamage;
 import me.pogostick01dev.summonersrift.listeners.PlayerLeaveArena;
 import me.pogostick01dev.summonersrift.listeners.PlayerMove;
+import me.pogostick01dev.summonersrift.listeners.SignManager;
 
 public class SummonersRift extends JavaPlugin {
 
@@ -23,6 +24,7 @@ public class SummonersRift extends JavaPlugin {
 		pm.registerEvents(new EntityDamage(), this);
 		pm.registerEvents(new PlayerLeaveArena(), this);
 		pm.registerEvents(new PlayerMove(), this);
+		pm.registerEvents(new SignManager(), this);
 	}
 	
 	public static Plugin getPlugin() {
